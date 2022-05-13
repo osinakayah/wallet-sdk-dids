@@ -1,9 +1,5 @@
-
-import { DidKeyManager } from './did.methods/did.key.manager';
-
-
-export {
-  DidKeyManager
+export const hello = () => {
+  console.log('hello')
 }
 
 
