@@ -5,14 +5,14 @@ import { IDidManager, DIDResponse } from '../interface/i.did.manager';
 import {Ed25519VerificationKey2020} from '@digitalbazaar/ed25519-verification-key-2020';
 import {CryptoLD} from 'crypto-ld';
 
-const {Wallet} = require('@docknetwork/wallet-sdk-core/lib/modules/wallet')
+// const {Wallet} = require('@docknetwork/wallet-sdk-core/lib/modules/wallet')
 export class DidKeyManager  implements IDidManager{
   private static instance: IDidManager;
 
-  private readonly wallet;
+  // private readonly wallet;
 
   private constructor() {
-    this.wallet = Wallet.getInstance();
+    // this.wallet = Wallet.getInstance();
   }
   async createDID(options = {}): Promise<DIDResponse> {
     const cryptoLd = new CryptoLD();
@@ -40,17 +40,19 @@ export class DidKeyManager  implements IDidManager{
   }
 
 
+  // @ts-ignore
   saveDID(walletDocument: any): Promise<DIDResponse> {
-    return  this.wallet.add(walletDocument)
+    // return  this.wallet.add(walletDocument
   }
 
   getWallet(): any {
-    return this.wallet
+    // return this.wallet
   }
 
+  // @ts-ignore
   async getDIDs(): Promise<Array<DIDResponse>> {
-    return  this.wallet.query({
-      type: 'DID',
-    });
+    // return  this.wallet.query({
+    //   type: 'DID',
+    // });
   }
 }

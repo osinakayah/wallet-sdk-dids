@@ -5,6 +5,6 @@ export interface DIDResponse {
 export interface IDidManager {
   createDID: (options?: any)=> Promise<DIDResponse>
   getDIDs: ()=> Promise<Array<DIDResponse>>
-  saveDID: (didDocument: any)=> Promise<DIDResponse>
+  saveDID: (walletDocument: any)=> Promise<DIDResponse>
   getWallet: ()=> any
 }

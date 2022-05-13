@@ -1,7 +1,6 @@
 import { IDidManager, DIDResponse } from '../interface/i.did.manager';
 export declare class DidKeyManager implements IDidManager {
     private static instance;
-    private readonly wallet;
     private constructor();
     createDID(options?: {}): Promise<DIDResponse>;
     static getInstance(): IDidManager;
